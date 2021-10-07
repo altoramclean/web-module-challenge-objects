@@ -112,9 +112,12 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(array,index){ 
-  return array[index].push `{name:'Daniela', rating: 5, feedback: 'Beautiful atmosphere and wonderful vegan options!'}`
+function addReview(array,name,rating,feedback){ 
+   array.push ({name,rating,feedback})
+   return array
 }
+console.log('Task 5:', addReview(reviews, 'Daniela',  5, 'Beautiful atmosphere and wonderful vegan options!'));
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
