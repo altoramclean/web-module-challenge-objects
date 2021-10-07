@@ -15,9 +15,15 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name,price,category){
+  let menu={
+    "name": name,
+    "price": price,
+    "category": category,
+  }
+  return menu;  
 }
+console.log(createMenuItem('tacos',8,'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -29,6 +35,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+console.log(createMenuItem("Bagel",5,"Breakfast"));
+console.log(createMenuItem("sandwich",10,"lunch"));
+console.log(createMenuItem("Pasta",20,"Dinner"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -43,13 +52,23 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-const burger = {
+ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
+  /*your code*/
 
+
+  discount: function(customer){
+  if(customer === 'teacher' || customer === 'student'){
+    return this.price - (this.price * 0.25);
+  }else if (customer === 'public'){
+    return this.price - (this.price * 0.1);
+  }
+}
+ }
+
+console.log(burger.discount('student'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -69,6 +88,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log('task 3:', reviews[6].feedback);
+
 
 
 
@@ -78,7 +99,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
+ 
 
 
 
